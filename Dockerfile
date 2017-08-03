@@ -4,7 +4,7 @@ WORKDIR /
 RUN apt-get update \
     && apt-get -y install software-properties-common \
     && apt-get update \
-    && apt-get install -y git \
+    && apt-get install -y \
      cmake \
      libcryptopp-dev \
      libleveldb-dev \
@@ -17,8 +17,7 @@ RUN apt-get update \
      ocl-icd-libopencl1 \
      opencl-headers \
      mesa-common-dev \
-     libmicrohttpd-dev \
-     build-essential
+     libmicrohttpd-dev
 
 RUN mkdir /miner && \
     cd /miner && \
