@@ -11,10 +11,4 @@ RUN mkdir /miner && \
     tar -xvf ethminer-0.12.0.dev1-Linux.tar.gz && \
     cd bin/ 
     
-ENV GPU_FORCE_64BIT_PTR=0
-ENV GPU_MAX_HEAP_SIZE=100
-ENV GPU_USE_SYNC_OBJECTS=1
-ENV GPU_MAX_ALLOC_PERCENT=100
-ENV GPU_SINGLE_ALLOC_PERCENT=100
-
-ENTRYPOINT ["/miner/bin/ethminer", "-U" , "--farm-recheck 200", "-F 192.168.1.153:8080"]
+ENTRYPOINT ["/miner/bin/ethminer", "-U", "-S us2.ethermine.org:4444", "-O A6127C90e07fdB0eF881516A745901FAB5438E6b.test"]
