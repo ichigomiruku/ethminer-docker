@@ -2,22 +2,7 @@ FROM nvidia/cuda:8.0-devel-ubuntu16.04
 WORKDIR /
 
 RUN apt-get update \
-    && apt-get -y install software-properties-common \
-    && apt-get update \
-    && apt-get install -y \
-     cmake \
-     libcryptopp-dev \
-     libleveldb-dev \
-     libjsoncpp-dev \
-     libjsonrpccpp-dev \
-     libboost-all-dev \
-     libgmp-dev \
-     libreadline-dev \
-     libcurl4-gnutls-dev \
-     ocl-icd-libopencl1 \
-     opencl-headers \
-     mesa-common-dev \
-     libmicrohttpd-dev
+    && apt-get -y install software-properties-common
 
 RUN mkdir /miner && \
     cd /miner && \
