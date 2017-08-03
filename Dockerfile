@@ -2,7 +2,8 @@ FROM nvidia/cuda:8.0-devel-ubuntu16.04
 WORKDIR /
 
 RUN apt-get update \
-    && apt-get -y install software-properties-common
+    && apt-get -y install software-properties-common \
+    wget
 
 RUN mkdir /miner && \
     cd /miner && \
