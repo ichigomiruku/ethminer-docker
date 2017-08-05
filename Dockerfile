@@ -11,4 +11,4 @@ RUN mkdir /miner && \
     tar -xvf ethminer-0.12.0.dev1-Linux.tar.gz && \
     cd bin/ 
     
-ENTRYPOINT ["/miner/bin/ethminer", "-U", "-S us2.ethermine.org:4444", "-O A6127C90e07fdB0eF881516A745901FAB5438E6b.test"]
+ENTRYPOINT ["/miner/bin/ethminer", "-U", "-S us2.ethermine.org:4444", "-O A6127C90e07fdB0eF881516A745901FAB5438E6b.$(hostname)"]
